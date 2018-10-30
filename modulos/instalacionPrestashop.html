@@ -1,12 +1,119 @@
-<h1>INSTALACION P</h1>
-                      <h2>QUe hemos usado</h2>
+<h1>INSTALACION</h1>
+                      <h2>Como instalar Prestashop en el servidor</h2>
                   
-                    <p>Why do we use it?
-                           ble content -or-less normal distributreadable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            Why do we use it?
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                    <p>
-                            Mas cosas
-                            
-                    </p>
+                    <p>-Primero crearemos la base de datos para el prestashop en mysql<p>
+                        <ul>
+                                <li>Entramos en el mysql </li>
+                                <p> mysql -u root -p</p>
+                                <img class="imgsection" src="img/prestashop.PNG">
+                                <li>Creamos la base de datos</li>
+                                <p>create database prestashop</p>
+                                <img class="imgsection" src="img/prestashop2.PNG">
+                                <li>Le asignamos un password y permisos de control total sobre la base de datos.</li>
+                                <p> grant all PRIVILEGES on prestashop.* to prestashop@localhost identified by 'password';</p>
+                                <img class="imgsection" src="img/prestashop3.PNG">
+                                <li>Hay que asegurarse siempre de refrescar todos los privilegios.</li>
+                                <p> FLUSH PRIVILEGES;</p>
+                                <img class="imgsection" src="img/prestashop4.PNG">
+                                </ul>
+                        
+                                <p>-Iniciamos la instalacion descargando el paquete de prestashop</p>
+                                <ul>
+                                <li>wget http://www.prestashop.com/download/releases/prestashop_1.7.4.3.zip</li>
+                                        <img class="imgsection" src="img/prestashop5.PNG">
+                                </ul>
+                                
+                                
+                                <p>-Descomprimimos el paquete descargado</p>
+                                <ul>
+                                <li>unzip prestashop_1.7.4.3.zip</li>
+                                        <img class="imgsection" src="img/prestashop6.PNG">
+                        
+                                </ul>
+                                
+                                <p>-Descomprimimos un nuevo paquete que aparece cuando extraemos el descargado</p>
+                                <ul>
+                                <li>unzip prestashop.zip</li>
+                                        <img class="imgsection" src="img/prestashop7.PNG">
+                        
+                                </ul>
+                                
+                                <p>-Damos los permisos a la carpeta descomprimida y cambiamos de dueño</p>
+                                <ul>
+                                <li>chown -R www-data:www-data owncloud </li>
+                                <li>chmod 755 owncloud </li>
+                                <img class="imgsection" src="img/prestashop8.PNG">
+                                
+                                </ul>
+                                
+                        
+                                
+                                
+                                <p>-Ponemos nuestra ip asignada en el servidor y la carpeta prestashop para abrir el index.php y nos dara fallo asique tenemos que crear un archivo de configuracion.</p>
+                                <ul>
+                                <li> 10.9.52.107/prestashop </li>
+                                <li> nano /etc/apache2/sites-available/prestashop.conf</li>
+                                <img class="imgsection" src="img/prestashop9.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Después de configurar el VirtualHost anterior, habilítelo ejecutando los comandos a continuación . Por ultimo reiniciamos el apache2</p>
+                                <ul>
+                                <li> a2ensite prestashop.conf </li>
+                                <li> a2enmod rewrite</li>	
+                                <li> service apache restart</li>
+                        
+                                <img class="imgsection" src="img/prestashop10.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Volvemos a entrar y ahora nos permite empezar a instalar.</p>
+                                <ul>
+                                <img class="imgsection" src="img/prestashop11.PNG">
+                                        <img class="imgsection" src="img/prestashop12.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Siguiendo los pasos de instalacion no nos deja continuar porque tenemos que instalar unos paquetes del php.</p>
+                                <ul>
+                                
+                                <li>sudo apt install php libapache2-mod-php php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-mcrypt php-ldap php-zip php-curl</li>
+                                <img class="imgsection" src="img/prestashop13.PNG">
+                                <img class="imgsection" src="img/prestashop14.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Instalado el php que faltaba ya nos deja continuar y a continuación tendremos que rellanar los siguientes campos.</p>
+                                <ul>
+                                
+                                <img class="imgsection" src="img/prestashop15.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Ahora tendremos que rellanar los siguientes campos con los datos de la base de datos.</p>
+                                <ul>
+                                
+                                <img class="imgsection" src="img/prestashop16.PNG">
+                                
+                                </ul>
+                                
+                                <p>-Esperamos que finalice la instalacion y una vez terminada ya podras acceder a tu prestashop .</p>
+                                <ul>
+                                
+                                <img class="imgsection" src="img/prestashop17.PNG">
+                                        <img class="imgsection" src="img/prestashop18.PNG">
+                        
+                                
+                                </ul>
+                                
+                                <p>-Antes de entrar tendremos que borrar el archivo install dentro de la carpeta prestashop y una vez borrado solo tendriamos que entrar por admin y iniciar sesion.</p>
+                                <ul>
+                                
+                                <li>rm -r install</li>
+                                <li>10.9.52.107/prestashop/admin038vmsoyg</li>
+                                <img class="imgsection" src="img/prestashop19.PNG">
+                                        <img class="imgsection" src="img/prestashop20.PNG">
+                        
+                                
+                                </ul>
+                                
