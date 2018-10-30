@@ -3,7 +3,10 @@ function instalacion() {
     document.getElementById("instalacion").style.display = 'block';
     document.getElementById("recursos").style.display = 'none';
     document.getElementById("problemas").style.display = 'none';
-
+    document.getElementById("queesW").style.display = 'none';
+    document.getElementById("queesP").style.display = 'none';
+    document.getElementById("queesO").style.display = 'none';
+  
 
 }
 
@@ -13,6 +16,9 @@ function recursos() {
     document.getElementById("recursos").style.display = 'block'
     document.getElementById("instalacion").style.display = 'none';
     document.getElementById("problemas").style.display = 'none';
+    document.getElementById("queesW").style.display = 'none';
+    document.getElementById("queesP").style.display = 'none';
+    document.getElementById("queesO").style.display = 'none';
 }
 
 
@@ -21,11 +27,14 @@ function problemas() {
     document.getElementById("problemas").style.display = 'block';
     document.getElementById("instalacion").style.display = 'none';
     document.getElementById("recursos").style.display = 'none';
+    document.getElementById("queesW").style.display = 'none';
+    document.getElementById("queesP").style.display = 'none';
+    document.getElementById("queesO").style.display = 'none';
 }
 
 
-function sonido() {
-    var audio = document.getElementById("music"); audio.play();
+function sonido(){
+    var audio = document.getElementById("music"); audio.play(); 
 
 }
 

@@ -1,12 +1,67 @@
-<h1>INSTALACION O</h1>
-                      <h2>QUe hemos usado</h2>
+<h1>INSTALACION </h1>
+                      <h2>Como hemos instalado Owncloud en el servidor</h2>
                   
-                    <p>Why do we use it?
-                           ble content -or-less normal distributreadable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            Why do we use it?
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                    <p>
-                            Mas cosas
-                            
-                    </p>
+                      <ul>
+                        <li>Entramos en el mysql </li>
+                        <p> mysql -u root -p</p>
+                        <img class="imgsection" src="img/owncloud.PNG">
+                        <li>Creamos la base de datos</li>
+                        <p>create database owncloud</p>
+                        <img class="imgsection" src="img/owncloud2.PNG">
+                        <li>Le asignamos un password y permisos de control total sobre la base de datos.</li>
+                        <p> grant all PRIVILEGES on owncloud.* to owncloud@localhost identified by 'password';</p>
+                        <img class="imgsection" src="img/owncloud3.PNG">
+                        <li>Hay que asegurarse siempre de refrescar todos los privilegios.</li>
+                        <p> FLUSH PRIVILEGES;</p>
+                        <img class="imgsection" src="img/owncloud4.PNG">
+                        </ul>
+                
+                        <p>-Iniciamos la instalacion descargando el paquete de owncloud</p>
+                        <ul>
+                        <li>wget http://download.owncloud.org/community/owncloud-10.0.10.zip</li>
+                                <img class="imgsection" src="img/owncloud5.PNG">
+                        </ul>
+                        
+                        
+                        <p>-Descomprimimos el paquete descargado</p>
+                        <ul>
+                        <li>unzip owncloud-10.0.10.zip</li>
+                                <img class="imgsection" src="img/owncloud6.PNG">
+                
+                        </ul>
+                        
+                        <p>-Damos los permisos a la carpeta descomprimida y cambiamos de dueño</p>
+                        <ul>
+                        <li>chown -R www-data:www-data owncloud </li>
+                        <li>chmod 755 owncloud </li>
+                        <img class="imgsection" src="img/owncloud7.PNG">
+                        
+                        </ul>
+                        
+                        
+                        <p>-Ponemos nuestra ip asignada en el servidor y la carpeta owncloud para abrir el index.php y nos mostrara los datos que necesita para la instalacion.</p>
+                        <ul>
+                        <li> 10.9.52.107/owncloud </li>
+                        <img class="imgsection" src="img/owncloud8.PNG">
+                        
+                        </ul>
+                        
+                        
+                        <p>-Rellenamos los datos de la base de datos y pulsamos submit.</p>
+                        <ul>
+                        <img class="imgsection" src="img/owncloud9.PNG">
+                        
+                        </ul>
+                        
+                        <p>-Iniciamos sesion.</p>
+                        <ul>
+                        <img class="imgsection" src="img/owncloud10.PNG">
+                        
+                        </ul>
+                        
+                        <p>-Y ya estaria instalado wordpress en nuestro servidor.</p>
+                        <ul>
+                        <img class="imgsection" src="img/owncloud11.PNG">
+                        
+                        </ul>
+                                        

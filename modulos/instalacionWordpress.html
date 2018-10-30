@@ -1,12 +1,74 @@
-<h1>INSTALACION W</h1>
-                      <h2>QUe hemos usado</h2>
+<h1>INSTALACION </h1>
+                      <h2>Como instalar Wordpress en el servidor</h2>
                   
-                    <p>Why do we use it?
-                           ble content -or-less normal distributreadable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                            Why do we use it?
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                    <p>
-                            Mas cosas
-                            
-                    </p>
+                    <p>Primero crearemos la base de datos para el wordpress en mysql </p>
+                    <ul>
+                        <li>Entramos en el mysql </li>
+                        <p> mysql -u root -p</p>
+                        <img class="imgsection" src="img/wordpress.PNG">
+                        <li>Creamos la base de datos</li>
+                        <p>create database wiki2</p>
+                        <img class="imgsection" src="img/wordpress2.PNG">
+                        <li>Le asignamos un password y permisos de control total sobre la base de datos.</li>
+                        <p> grant all PRIVILEGES on wiki2.* to wordpress@localhost identified by 'password';</p>
+                        <img class="imgsection" src="img/wordpress3.PNG">
+                        <li>Hay que asegurarse siempre de refrescar todos los privilegios.</li>
+                        <p> FLUSH PRIVILEGES;</p>
+                        <img class="imgsection" src="img/wordpress4.PNG">
+                        </ul>
+                
+                        <p>-Iniciamos la instalacion descargando el paquete de wordpress</p>
+                        <ul>
+                        <li>wget http://wordpress.org/latest.tar.gz</li>
+                                <img class="imgsection" src="img/wordpress5.PNG">
+                        </ul>
+                        
+                        
+                        <p>-Descomprimimos el paquete descargado</p>
+                        <ul>
+                        <li>tar -xzvf latest.tar.gz</li>
+                                <img class="imgsection" src="img/wordpress6.PNG">
+                
+                        </ul>
+                        
+                        <p>-Damos los permisos a la carpeta descomprimida</p>
+                        <ul>
+                        <li>chmod 777 wordpress </li>
+                        <img class="imgsection" src="img/wordpress7.PNG">
+                        
+                        </ul>
+                        
+                        
+                        <p>-Ponemos nuestra ip asignada en el servidor y la carpeta wordpress para abrir el index.php y nos mostrara los datos que necesita para la instalacion pulsamos LET´S GO.</p>
+                        <ul>
+                        <li> 10.9.52.107/wordpress </li>
+                        <img class="imgsection" src="img/wordpress8.PNG">
+                        
+                        </ul>
+                        
+                        
+                        <p>-Rellenamos los datos de la base de datos y pulsamos submit.</p>
+                        <ul>
+                        <img class="imgsection" src="img/wordpress9.PNG">
+                        
+                        </ul>
+                
+                        <p>-Iniciamos la instalacion de wordpress rellenamos los campos con los siguientes datos.</p>
+                        <ul>
+                        <img class="imgsection" src="img/wordpress10.PNG">
+                        
+                        </ul>
+                        
+                        <p>-Iniciamos sesion.</p>
+                        <ul>
+                        <img class="imgsection" src="img/wordpress11.PNG">
+                        
+                        </ul>
+                        
+                        <p>-Y ya estaria instalado wordpress en nuestro servidor.</p>
+                        <ul>
+                        <img class="imgsection" src="img/wordpress12.PNG">
+                        
+                        </ul>
+                        
+       
