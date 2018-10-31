@@ -16,7 +16,7 @@
 		$('velocimetro').fadeOut(500);
 		$('#sateliterotando').fadeOut(500);
 		$('sat').fadeOut(500);
-		$("#astroajustes").fadeIn(20000);
+
 		}
 
 		
