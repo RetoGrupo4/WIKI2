@@ -9,3 +9,5 @@ function mostrar(enla) {
   obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
   enla.innerHTML = (enla.innerHTML == '-') ? '+' : '-';
 }
+
+
