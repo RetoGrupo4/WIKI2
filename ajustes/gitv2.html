@@ -1,61 +1,55 @@
-<section>
- 
-    <h1>GIT Y GITHUB </h1>
-    <article>
-      
-           <p>-Creamos una cuenta en github y desde esa cuenta creamos un nuevo repositorio.</p>
-           <img class="imgsection" src="img/Captura.png">
-           
-           <p>-Creado el repositorio nos saldra las posibles maneras de poder subir nuestros archivos al github </p>
-           <img class="imgsection" src="img/Captura2.png">
-           
-          
-           <p>-Por la web desde github tambien es posible subir archivos</p>
-                   <img class="imgsection" src="img/Captura3.png">
-                   
-   
-           
-           <p>-Por el terminal mediante comandos estos son los pasos a seguir:</p>
-       
-           <ul>
-           
-           <li>Instalar el git.</li>
-           
-           <img class="imgsection" src="img/Captura4.png">
-           
-           <li>Vincular nuestro correo a git.</li>
-   
-               <img class="imgsection" src="img/Captura5.png">
-           
-           
-           <li>Iniciamos y creamos el repositorio dentro del directorio de trabajo.</li>
-           <img class="imgsection" src="img/Captura6.png">
-           
-           <li>Hacemos una copia</li>
-           <img class="imgsection" src="img/Captura7.png">
-           
-           <li>Consolidamos</li>
-           <img class="imgsection" src="img/Captura8.png">
-           
-           <li>Vinculamos a nuestro git (local) el nuevo directorio de trabajo (repositorio creado en la cuenta de GitHub)</li>
-           <img class="imgsection" src="img/Captura9.png">
-           
-           <li>Pasamos el proyecto de Git a GitHub, este comando solo se utilizara el origin master cuando lo usemos por primera vez.
-           Nos pedira usuario y contraseña.</li>
-           <img class="imgsection" src="img/Captura10.png">
-           
-               <li>Para pasar a GitHub modificaciones usaremos solo el push. Pedira usuario y contraseña de nuevo</li>
-           <img class="imgsection" src="img/Captura11.png">
-           
-           <li>Una forma de subir al equipo algo que tengamos en el github seria utilizar el clone.</li>
-           git clone HTTPS:\\--------------------<br>
-           <img class="imgsection" src="img/Captura12.png">
-           
-           <li>Nuestro repositorio quedaria de este modo despues de los comandos realizados para crearlo donde se mostrara tambien los commit realizados por las modificaciones que hagamos.</li>
-           <img class="imgsection" src="img/Captura13.png">
-           
-           </ul>
+<h3>Ramas:</h3>
+<p> Se crean 3 ramas para trabajar:</p>
+<ol>
+    <li><a href="https://github.com/RetoGrupo4/WIKI2/tree/master" target="_blank">Master:</a> Principal (usada para versiones finales)</a></li>
+    <li><a href="https://github.com/RetoGrupo4/WIKI2/tree/WIP" target="_blank">WIP: </a> Proceso (usada para el trabajo continuo, puede
+        contener errores leves)</li>
+    <li><a href="https://github.com/RetoGrupo4/WIKI2/tree/fix" target="_blank">FIX:</a> Errores (usada para corregir errores graves)</li>
+</ol>
+
+<p>Las ramas WIP y FIX son las utilizadas por los miembros del grupo para trabajar.</p>
+<br><br>
+<h3>Recursos usados:</h3>
+<ol start="1">
+    <li>Propia web de GITHUB.</li>
+    <li>GITHUB Desktop. (aplicación de escritorio)</li>
+    <li>GIT BASH. (Consola de comandos específica para GITHUB).</li>
+    <ol start="a">
+        <li>Esto nos permite usar la consola de comandos del propio entorno de desarrollo</li>
+    </ol>
+    <li>Consola de comandos propia del S.O</li>
+</ol>
+
+<br><br>
+<h3>Comandos:</h3>
+
+<ol start="1">
+        <li>GIT COMMIT</li>
+            <ol start="a">
+                <li>El contenido se muestra sección de BRANCH en la que se haya subido.</li>
+                <li>De esta manera se puede ver que archivos han sido actualizados por el nombre del commit.</li>
+            </ol>
+        <li>GIT COMMIT + GIT TAG</li>
+            <ol start="a">
+                    <li>El contenido se muestra en la sección de TAGS.</li>
+                    <li>Las versiones correspondientes se clasifican con las etiquetas.</li>
+                    <ol start="1">
+                            <li>Crea un archivo con el nombre del TAG en una carpeta oculta vinculada al github.</li>
+                            <li>Los <a href="https://github.com/RetoGrupo4/WIKI2/tree/v2.9" target="_blank">TAGS </a>crean ramas propias.</li>
+                    </ol>
+                    <li>De esta manera tambien se puede ver que archivos han sido actualizados por el nombre del commit.</li>
+            </ol>
+</ol>
     
-       
-       </article>
-   </section>
+<br><br>
+<h3>Control de versiones mediante TAGS</h3>
+<p>Con el uso del comando GIT TAG podemos llevar un mayor control de las versiones, además de poder mostrarla en el
+    propio proyecto.</p>
+<p>Al vincular el proyecto con GITHUB con el comando GIT INIT se genera una carpeta oculta llamada .GIT, la cual nos
+    permite poder acceder a los TAGS mediante la carpeta .GIT\REFS\TAGS</p>
+<p>Para mostrar en la web cual es el último TAG creado, a través de un archivo php obtenemos un array de todos los
+    TAGS, en el cual ordenamos de mayor a menor, siendo la posición 0 (la versión mayor) la que cogeremos para
+    mostrarla en la web.</p>
+
+
+    <a href="./ajustes/github.html" target="_blank">Contenido explicado </a>

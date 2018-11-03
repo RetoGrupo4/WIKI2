@@ -15,6 +15,25 @@ function ajustesastro() {
     
     }
 
-//Script de lectura de archivos
 
+
+
+    var indice = 0;
+    
+    frases = new Array();
+    frases[0] = "Hola";
+    frases[1] = "Necesitas Ayuda";
+    frases[2] = 'Version ' .$version;
+
+    indice = Math.random()*(frases.length);
+    indice = Math.floor(indice);
+    
+    function rotar() {
+
+
+    if (indice == frases.length) {indice = 0;}
+    document.getElementById("rotando").innerHTML = frases[indice];
+    indice++;
+    setTimeout("rotar();",3500);
+    }
 

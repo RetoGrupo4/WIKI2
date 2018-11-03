@@ -19,6 +19,7 @@ if ($(window).width() > 660) {
 		$("#venus").animate({width:"4%"},18000);
 		$("#planetatierra").animate({width:"20%"},18000);
 		$("#sateliterotando2").animate({width:"3%"},20000);
+		
 	});
 
 	var vid = document.getElementById("audio");

@@ -17,9 +17,11 @@
 		$('#sateliterotando').fadeOut(500);
 		$('sat').fadeOut(500);
 		$("#astroajustes").fadeIn(20000);
+		$("#aleatorio").fadeIn(20000);
+	
 		}
 
-		
+	//codigo introducido por janire que falta por comentar
 		
 		function atraer(){
 			$("#menu").css('display','block');	
@@ -149,20 +151,3 @@
 	}
 
 
-/*que salgan estrellas al clicar en cohete PRUEBO CON ESTO PERO NO ME FUNCIONA ENTONCES solucion: con layer y si funciona */
-			function quesalganestrellas(){
-				/*$("#tellamoscriptoculto").fadeOut(5000);*/
-		}
-		
-/*	PARA MAS ADELANTE-->
-	/*	function mostrar2(){
-		$("clicame").click(function(){
-			$("nave").fadeIn(13000);
-		});
-		}*/
-			/*function mostrar2(){
-			$('#nave').fadeIn(13000);
-		}*/
-		
-
-	

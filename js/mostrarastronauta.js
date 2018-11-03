@@ -14,7 +14,8 @@
 			}
 			$("#astronauta").fadeOut(2000);
 			/*$("#sat").fadeOut(2000);*/
+			
 		}
 
 
-		
+	
