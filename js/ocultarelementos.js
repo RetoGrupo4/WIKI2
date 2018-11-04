@@ -17,7 +17,7 @@
 		$('#sateliterotando').fadeOut(500);
 		$('sat').fadeOut(500);
 		$("#astroajustes").fadeIn(20000);
-		$("#aleatorio").fadeIn(20000);
+		$("#rotando").fadeIn(20000);
 	
 		}
 
