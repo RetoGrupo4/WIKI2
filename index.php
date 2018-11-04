@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"			       crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/audios.js"></script>
@@ -37,7 +37,7 @@
 
 </head>
 
-<body id="scroll">
+<body>
 <!--Este DIV Se displaya cuando se HAGA CLIC EN EL COHETE y salen las estrellas-->
     <div id="capa" style="display:none;">
     <!--(el velocimetro de la nave que es una imagen gif)-->
@@ -72,13 +72,12 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
     <div id="venus"><img src="img/logos/venus2.png"></div>-->
     
     <!--EMPIEZA EL DOCU DE WORDPRESS-->
-    <div include-html="documentos.html"></div>
+    <div include-html="./contenido/documentos.html"></div>
 
 <!-- El planeta tierra  al resto tiene atracción es independiente (ahora hemos cambiado el funcionamiento con la introduccion de janire y no es necesario que el planeta tierra se acerque de forma independiente y tampoco que haga hover, para evitar conflictos con lo que ha hecho janire de (clic en planetas y muestre la documentacion, menu, sonido al pasar el raton por los enlaces) -->
-  <!-- El planeta tierra  al resto tiene atracción es independiente (ahora hemos cambiado el funcionamiento con la introduccion de janire y no es necesario que el planeta tierra se acerque de forma independiente y tampoco que haga hover, para evitar conflictos con lo que ha hecho janire de (clic en planetas y muestre la documentacion, menu, sonido al pasar el raton por los enlaces) -->
+
   <div class="contenedor1">
     <!-- La función atraer muestra los menus al clicar en los planetas que ha hecho janire-->
-    
           <div id="planetatierra" onClick="atraer()"><img class="mundi" src="img/logos/planetatierra5.png"></div>
             <div id="venus" onClick="atraervenus()" ><img  src="img/logos/venus2.png"></div>
             <div id="marte" onClick="atraermarte()" ><img id="tmarte" src="img/logos/marte.png"></div>
@@ -121,50 +120,23 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
 
 
 <!-- Recuadro de contenido extra  -->
-
 <div id="balloon">
+    <!--enlaces-->
 
     <div id="enlacesv2">
         <a id="gitv2" onMouseOver="sonido()" >GITHUB</a>
         <a  id="problemasv2" onMouseOver="sonido()" >PROBLEMAS</a>
     </div>
 
-<!--Selecciona el contenido que quiere mostrar-->
-<script>
-$(document).ready(function()
-{
-$("#gitv2").click(function(){
-        $.get("./ajustes/gitv2.html", function(htmlexterno){
-   $("#extra").html(htmlexterno);
-    	});
-});
-
-$("#problemasv2").click(function(){
-        $.get("./ajustes/problemasv2.html", function(htmlexterno){
-   $("#extra").html(htmlexterno);
-    	});
-});
-
-
-
-});
-</script>
-
-<div id="extra"></div>   
+<!--Contenido github y problemas-->
+    <div id="extra"></div>   
 </div>
 
-<!-- Imagen astronauta para contenido extra-->
-<div id="aleatorio" >
- 
-
-
-<div id="rotando" style="height:60px;margin:0px auto;"></div>
+<!-- script y contenido para el para mensajes astronauta-->
+<div id="rotando"></div>
 <script type="text/javascript">rotar();</script> 
-
-
-</div>
-
-    <img src="img/logos/astronauta.png" id="astroajustes" onClick="ajustesastro()" >
+<!-- Imagen de astronauta -->
+<img src="img/logos/astronauta.png" id="astroajustes" onClick="ajustesastro()" >
       
 <!-- Footer-->
 <footer>   
@@ -180,17 +152,9 @@ $("#problemasv2").click(function(){
 	<small>&copy; Copyright 2018. Creado por Anne Sierra, Jose Ranero, Janire Perez y Álvaro Saiz
     
 <!--Versiones -->
-	        <?php
-$directorio = ".git/refs/tags"; //ruta actual
-$ficheros  = scandir($directorio, 1);
-$version=array_values($ficheros)[0];
-print_r( "Version: " .$version);
-
-?>
-
-	
-	
-	
+	<?php
+	include './contenido/ajustes/version.php';
+	?>
 	</small>
         
 </footer>

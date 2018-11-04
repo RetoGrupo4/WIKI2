@@ -17,13 +17,13 @@ function ajustesastro() {
 
 
 
-
+//script de texto aleatorio
     var indice = 0;
-    
+   
     frases = new Array();
     frases[0] = "Hola";
     frases[1] = "Necesitas Ayuda";
-    frases[2] = 'Version ' .$version;
+    frases[2] = "";
 
     indice = Math.random()*(frases.length);
     indice = Math.floor(indice);
@@ -37,3 +37,23 @@ function ajustesastro() {
     setTimeout("rotar();",3500);
     }
 
+
+
+//script de contenido github y problemas de wiki 2
+    $(document).ready(function()
+{
+$("#gitv2").click(function(){
+        $.get("./contenido/ajustes/gitv2.html", function(htmlexterno){
+   $("#extra").html(htmlexterno);
+    	});
+});
+
+$("#problemasv2").click(function(){
+        $.get("./contenido/ajustes/problemasv2.html", function(htmlexterno){
+   $("#extra").html(htmlexterno);
+    	});
+});
+
+
+
+});

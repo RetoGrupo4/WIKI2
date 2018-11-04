@@ -1,0 +1,86 @@
+<section>
+<h1>LAMP </h1>
+
+<article>
+
+<p>LAMP hace referencia a un grupo de diferentes programas de código abierto que típicamente son instalados en conjunto, con el objetivo de habilitar a un servidor como prestador de los servicios de páginas web dinámicas, así como los de aplicaciones web.</p>
+
+    <h2>INSTALAR EL SERVIDOR WEB APACHE Y ACTUALIZAR EL CORTAFUEGOS USANDO LOS SIGUIENTES COMANDOS.</h2>
+    
+	<p>-Actualizar y descargar la lista de paquetes de los repositorios antes de instalar el apache.</p>
+	<ul>
+	<li>sudo apt-get update</li>
+	<li>sudo apt-get install apache2</li>
+	</ul>
+	<img class="imgsection" src="img/lamp1.png">
+	
+	<p>-Ajustar el cortafuegos para permitir el trafico de web.</p>
+	<ul>
+	<li>sudo ufw app list</li>
+	
+	</ul>
+	<img class="imgsection" src="img/lamp2.png">
+	
+	<p>-Si solicitas la información del perfil Apache Full, se  mostrara que el tráfico se encuentra habilitado para los puertos 80 y 443.</p>
+	<ul>
+	<li>sudo ufw app info "Apache Full"</li>
+	
+	</ul>
+	<img class="imgsection" src="img/lamp3.png">
+	
+	<p>-Permitir el tráfico de entrada HTTP y HTTPS para este perfil.</p>
+	<ul>
+	<li>sudo ufw allow in "Apache Full"</li>
+	
+	</ul>
+	<img class="imgsection" src="img/lamp4.png">
+	
+	<p>-Por ultimo comprobaremos con la direccion ip del servidor la pagina index.html por defecto.</p>
+	
+	<img class="imgsection" src="img/lamp5.png">
+
+</article>
+
+<article>
+	
+	<h2>MYSQL ES UN SISTEMA DE ADMINISTRACIÓN DE BASES DE DATOS.</h2>
+	
+	<p>-Instalar MySQL.</p>
+	<ul>
+	<li>sudo apt-get install mysql-server</li>
+	</ul>
+	<img class="imgsection" src="img/lamp6.png">
+	
+	<p>-Cuando la instalación esté completa, debes ejecutar un archivo de comandos de seguridad que viene preinstalado con MySQL.</p>
+	<ul>
+	<li>sudo mysql_secure_installation</li>
+	</ul>
+	<img class="imgsection" src="img/lamp7.png">
+
+	<img class="imgsection" src="img/lamp8.png">
+
+</article>
+
+<article>
+	
+	<h2>PHP PUEDE EJECUTAR ARCHIVOS, CONECTARSE A TUS BASES DE DATOS MYSQL PARA OBTENER INFORMACIÓN, Y MANEJAR LA VISUALIZACIÓN DEL CONTENIDO PROCESADO SOBRE TU SERVIDOR WEB.</h2>
+	
+	<p>-Instalar PHP.</p>
+	<ul>
+	<li>sudo apt-get install php libapache2-mod-php php-mysql</li>
+	</ul>
+	<img class="imgsection" src="img/lamp9.png">
+	
+	<p>-A continuación, reiniciamos el servidor Apache para que los cambios sean reconocidos, y se puede hacer mediante el comando:</p>
+	<ul>
+	<li>sudo service apache2 restart</li>
+	<li>sudo service apache2 status</li>
+	</ul>
+	<img class="imgsection" src="img/lamp10.png">
+
+
+
+</article>
+
+
+</section>
