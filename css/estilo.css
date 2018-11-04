@@ -1570,11 +1570,20 @@ margin-right: -5em;
 	
 }
 
+<<<<<<< HEAD
 #queesW,#queesP,#queesO{
 	height:70%;
 	overflow:auto;
 	}
 
+=======
+#queesW,#queesP,#queesO,#contenido{
+	height:70%;
+	overflow:auto;
+	}
+	
+	
+>>>>>>> 8b2da505f52f1db5871f396b8f7be4f420f724f2
 #balloon{
     /* border-radius: 5px; */
     background-color: #1a1b27;
