@@ -1,0 +1,79 @@
+<div id="letrasfinal"style="display:none;">
+    <div id="titulos" >
+        <div id="titulocontenido">
+<!--SOn las letras de los creditos, si se pincha en el platillo aparecen, y si se vuelve a pinchar se regresa-->
+        <p> <h1>2DW3</h1></h1> </p>
+    
+    <p><h2>Wiki 2 - Grupo 4</h2></p>
+    
+    <p>Despliegue de Apliaciones Web y Diseño de Interfaces Web</p>
+    <p>Curso: 2018- 2019</p>
+    <p>FP Txurdinaga LHII</p>
+    <p>Miembros del Grupo:</p>
+    
+    <p> Anne Sierra </p>
+    <p> Janire Pérez </p>
+    <p> Jose Ranero </p>
+    <p> Alvaro Saiz</p>
+    
+    </div></div>
+</div>
+
+
+<!--ES el menu que aparece al pinchar en cada uno de los tres planetas-->
+<div id="menu" style="display:none">
+  
+    <a class="elemento" onclick= "instalacion()" onmouseover="sonido()">Instalacion</a>
+    
+    <a  class="elemento" onclick= "problemas()"  onmouseover="sonido()">Problemas</a>
+   
+</ul>
+    </div>
+    <audio id="music">
+        <source src="./audios/sonidomenu.wav"> <!--sonido del menu con el hovver-->
+       
+        </audio>
+    </div>
+    
+
+    <!--TODA LA DOCUMENTACION DE WIKI 2, APARECE AL PINCHA EN CADA PLANETA-->
+    <div id="documento" style="display: none;">
+<!-- sale el que es de cada planeta nada mas pinchar.-->
+     <div id="quees" style="visibility: visible;">
+                
+                <div id="queesW" include-html="./contenido/modulos/queeswordpress.html" style = "display:inline;"></div>
+
+                <div id="queesP" include-html="./contenido//modulos/queesprestashop.html" style = "display:inline;"></div>
+
+                <div id="queesO" include-html="./contenido//modulos/queesowncloud.html" style = "display:inline;"></div>
+                    
+             </div>
+
+             <!--este div, aparece si se selecciona algo del menu, y solo aparece el correspondiente-->
+        <div id="contenido" style="visibility: hidden;">
+
+          
+            <div id="instalacion" style="display: none;">
+                
+                <div id="instalacionW" include-html="./contenido/modulos/instalacionWordpress.html" style = "display:none;"></div>
+
+                <div id="instalacionP" include-html="./contenido/modulos/instalacionPrestashop.html" style = "display:none;"></div>
+
+                <div id="instalacionO" include-html="./contenido/modulos/instalacionOwnCloud.html" style = "display:none;"></div>
+                    <a  onclick= "volver()"href="#"> <!--funcion de volver a wiki2 principio-->
+                      Volver
+                    </a>
+             </div>
+          
+             <div id="problemas" style= "display: none;" >
+                   
+                <div id="problemW" include-html="./contenido/modulos/problemasWordpress.html" style = "display:none;"></div>
+
+                <div id="problemP" include-html="./contenido/modulos/problemasPrestashop.html" style = "display:none;"></div>
+
+                <div id="problemO" include-html="./contenido/modulos/problemasOwnCloud.html" style = "display:none;"></div>
+                    <a onclick= "volver()"href="#">
+                            Volver
+                    </a>
+             </div>
+            </div>
