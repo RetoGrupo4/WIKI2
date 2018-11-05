@@ -40,7 +40,7 @@
 
 		
 	}
-	function atraervenus(){
+	function atraervenus(){ // funcion para el planeta venus ( prestashop)
 		$("#menu").css('display','block');	
 			
 		$("#queesW").css('display','none');	
@@ -58,7 +58,7 @@
 
 		
 	}
-	function atraermarte(){
+	function atraermarte(){ // fuincion para el planeta marte ( owncloud)
 		$("#menu").css('display','block');	
 		$("#queesW").css('display','none');	
 		$("#queesP").css('display','none');	
@@ -78,7 +78,7 @@
 
 		
 	}
-	function volver(){
+	function volver(){ // funcion para regresar a los planetas y el contenido nada mas entrar en wiki2
 		$("#menu").css('display','none');	
 		$("#documento").css('display','none');
 		$("#contenido").css('visibility','hidden');
@@ -102,8 +102,8 @@
 
 		
 	}
-	function letras(){
-		$("#menu").css('display','none');	
+	function letras(){  //consiste en sacar la parte final de la wiki 2, hacer que salgan las letras de creditos.
+		$("#menu").css('display','none');	// desaparece todo y sale los creditos
 		$("#queesW").css('display','none');	
 		$("#queesP").css('display','none');	
 		
@@ -124,7 +124,7 @@
 		
 	}
 
-	function volverwiki2(){
+	function volverwiki2(){  // regresa a wiki2 desde las letras.
 		$("#menu").css('display','none');	
 		$("#documento").css('display','none');
 		$("#contenido").css('visibility','hidden');

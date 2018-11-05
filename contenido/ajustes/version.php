@@ -6,3 +6,7 @@ $version=array_values($ficheros)[0];
 $versiones=print_r( "Version: " .$version);
 
 ?>
+
+
+
+

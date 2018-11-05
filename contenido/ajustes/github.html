@@ -64,7 +64,7 @@ a:hover{
     color:red;
 }
 img{
-    width: 25%;
+    width: 40%;
     padding-left: 25%;
     padding-right: 25%;
 
@@ -123,7 +123,6 @@ img{
 <h1>Comandos:</h1>
 <br><br>
         <p>GIT CHECKOUT &lt;RAMA&gt;</p>
-    
                 <li>Nos permite cambiar de rama en la consola de comandos o en el GIT BASH</li>
      
         <br><br>
@@ -150,14 +149,15 @@ img{
 <br><br>
 <h1>Control de versiones:</h1>
 <br><br>
-    <p> </p><br><br>
-    <br><img src="img/vscgit.png"><br><br>
-    <br><img src="img/ramas.png"><br><br>
+    <p>Dependiendo de que recurso estemos usando nos aparece la diferencia de commits respecto a la rama master.</p><br><br>
+    <p>En el Visual Studio Code aparece que hay 2 commits más, mientras que en la web aparecen 5 commits de diferencia. Esto se debe a que al introducir el comando GIT TAG sobre la rama WIP, el propio VSC solo detecta los commits que se han hecho en esa rama mientras que la web tambien detecta los Tags que se han creado sobre esa rama.</p>
+    <br><img src="img/vscgit.PNG"><br><br>
+    <br><img src="img/ramas.PNG"><br><br>
     
     <p>Con el uso del comando GIT TAG podemos llevar un mayor control de las versiones, además de poder mostrarla en el propio proyecto.</p><br><br>
     <p>Al vincular el proyecto con GITHUB con el comando GIT INIT se genera una carpeta oculta llamada .GIT, la cual nos permite poder acceder a los TAGS en la carpeta .GIT\REFS\TAGS</p><br><br>
     <p>Para mostrar en la web cual es el último TAG creado, a través de un archivo php obtenemos un array de todos los TAGS, en el cual ordenamos de mayor a menor, siendo la posición 0 (la versión mayor) la que cogeremos para mostrarla en la web.</p><br><br>
-    <br><img src="img/versiones.png"><br><br>
+    <br><img src="img/versiones.PNG"><br><br>
 
 <html>
 

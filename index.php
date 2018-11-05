@@ -115,7 +115,9 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
 
 <!-- Contenido Extra-->
 <!-- Script astronauta extras-->
-<script type="text/javascript" src="js/ajustes.js"></script>
+	<?php
+	include './contenido/ajustes/ajustes.php';
+	?>
 
 
 
@@ -125,7 +127,7 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
 
     <div id="enlacesv2">
         <a id="gitv2" onMouseOver="sonido()" >GITHUB</a>
-        <a  id="problemasv2" onMouseOver="sonido()" >PROBLEMAS</a>
+        <a  id="problemasv2" onMouseOver="sonido()" >COMO SE HA HECHO</a>
     </div>
 
 <!--Contenido github y problemas-->
@@ -136,7 +138,7 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
 <div id="rotando"></div>
 <script type="text/javascript">rotar();</script> 
 <!-- Imagen de astronauta -->
-<img src="img/logos/astronauta.png" id="astroajustes" onClick="ajustesastro()" >
+<img src="img/logos/astronauta.PNG" id="astroajustes" onClick="ajustesastro()" >
       
 <!-- Footer-->
 <footer>   

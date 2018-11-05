@@ -1,4 +1,13 @@
-//Script para mostrar los enlaces
+<?php
+$directorio = ".git/refs/tags"; //ruta actual
+$ficheros  = scandir($directorio, 1);
+$version=array_values($ficheros)[0];
+//print_r("Version: " .$version);
+
+?>
+
+<script>
+    //Script para mostrar los enlaces
 function ajustesastro() {
     var layer1,  mostrar;
     layer1 = document.getElementById("balloon");
@@ -15,16 +24,15 @@ function ajustesastro() {
     
     }
 
-
-
-//script de texto aleatorio
-    var indice = 0;
-   
+    
+    //script de texto aleatorio
+var indice = 0;
+ 
     frases = new Array();
-    frases[0] = "Hola";
-    frases[1] = "Necesitas Ayuda";
-    frases[2] = "";
-
+    frases[0] = "<p>Hola</p>";
+    frases[1] = "<p>Necesitas Ayuda</p>";
+    frases[2] = <?php echo json_encode("<p>Version:  $version</p>");?>;
+    
     indice = Math.random()*(frases.length);
     indice = Math.floor(indice);
     
@@ -57,3 +65,8 @@ $("#problemasv2").click(function(){
 
 
 });
+
+
+</script>
+
+
