@@ -125,7 +125,7 @@ Y esta asociado a una funcion llamada, mostrarastronauta que he hecho para que c
 
     <div id="enlacesv2">
         <a id="gitv2" onMouseOver="sonido()" >GITHUB</a>
-        <a  id="problemasv2" onMouseOver="sonido()" >PROBLEMAS</a>
+        <a  id="problemasv2" onMouseOver="sonido()" >COMO SE HA HECHO</a>
     </div>
 
 <!--Contenido github y problemas-->
