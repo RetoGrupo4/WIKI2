@@ -706,6 +706,7 @@ input, button, submit {
   outline-offset: 15px;
   box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.9);
 }
+
 /*imagenes de los programas de wiki2*/
 #queesW{
   
@@ -1147,25 +1148,18 @@ p#start
 	#instalacion{
 		height: 70%;
 		overflow: auto;
+		margin: 0;
 	}
+/*Editar el contenido de los problemas*/
+	.articleproblemas{
+		margin-top: 3em;
+	}
+	
 /*************************************************************************************/
 
 @media (max-width: 767px) {
 
-	@font-face {
-		font-family: "parrafo";
-		src: url(../font/chilanka/Chilanka.ttf);
-	}	
 	
-	@font-face {
-		font-family: "titulo";
-		src: url(../font/lovehearts/edosz.ttf);
-	}
-
-	@font-face {
-		font-family: "miletra";
-		src: url(./font/a_little_sunshine/Chilanka.ttf);
-	  }
 	
 
 body {
@@ -1571,9 +1565,11 @@ margin-right: -5em;
 }
 
 #queesW,#queesP,#queesO{
-	height:70%;
-	overflow:auto;
-	}
+	height: 62%;
+    overflow: auto;
+    margin-top: 2em;
+}
+	
 
 #balloon{
     /* border-radius: 5px; */
@@ -1600,6 +1596,15 @@ margin-right: -5em;
 		display: none;
 	}
 	
+	/*Editar las imagenes de los problemas */
+	.imgproblemas{
 	
-
+		width:86%; 
+	}
+	#problemas{
+		overflow: auto;
+	}
+	.tituloproblemas{
+		margin-left: -1em;
+	}
 }
