@@ -1,0 +1,163 @@
+<!DOCTYPE HTML >
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="description" content="Reto wiki 2">
+            <meta name="keywords" content="HTML,CSS, JS, PROXMOX, UBUNTU, APACHE, wordpress,prestashop,owncloud">
+            <meta name="author" content="Anne Sierra, Jose Ranero, Jenire Perez, Álvaro Saiz">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>
+<style>
+    @font-face {
+	font-family: "parrafo";
+	src: url(../font/chilanka/Chilanka.ttf);
+}	
+
+@font-face {
+	font-family: "titulo";
+	src: url(../font/lovehearts/edosz.ttf);
+}
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    body{
+        background-color: black;
+    }
+
+    h1{
+        color:white;
+        text-align: center;
+        font-family:titulo ;
+        font-size: 1.75em;
+    }
+
+p{
+    text-align: justify;
+    width: 50%;
+}
+p, li, a{
+    font-size: 1em;
+    font-family: parrafo;
+    color: white;
+    text-decoration: none;
+    
+  
+    padding-left: 25%;
+    padding-right: 25%;
+}
+#tag{
+    font-size: 1em;
+    font-family: parrafo;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+}
+li{
+padding-left:30%
+}
+a{
+    color:white;
+}
+a:hover{
+    color:red;
+}
+img{
+    width: 40%;
+    padding-left: 25%;
+    padding-right: 25%;
+
+}
+</style>
+
+
+<h1>Ramas:</h1>
+<br><br>
+<p> Se crean 3 BRANCH (Ramas) para trabajar:</p><br>
+
+   <a href="https://github.com/RetoGrupo4/WIKI2/tree/master" target="_blank">Master:</a><br>
+   <p>Esta rama se crea por defecto al crear el repositorio. Es usada para versiones finales y funcionales, y son las que se entregan</p><br>
+    <a href="https://github.com/RetoGrupo4/WIKI2/tree/WIP" target="_blank">WIP: </a> <br>
+    <p>Esta rama se crea una vez creado el repositorio. Es usada para trabajo en proceso y puede contener errores que no entorpezcan al desarrollo del proyecto.</p><br>
+ <a href="https://github.com/RetoGrupo4/WIKI2/tree/fix" target="_blank">FIX:</a> <br>
+ <p>Esta rama se crea una vez creado el repositorio. Es usada para correccion de errores graves que impidan continuar con el proyecto.</p><br>
+
+<p>Las ramas WIP y FIX son las utilizadas por los miembros del grupo para trabajar.</p><br>
+
+<p>Ademas con el comando GIT TAG podemos crear mas ramas categorizadas por etiquetas de verison y nos permite introducir en un archivo los datos de autor, fecha y hora de creacion...</p>
+
+<br><br>
+<h1>Recursos usados:</h1>
+<br><br>
+
+        <p>1. Propia web de GITHUB.</p>
+        <li>Limitaciones de tamaño. Los archivos no pueden ser mayores a 100 MB mientras que el repositorio puede alojar 1 GB de información.</li>
+
+        <br>
+        
+        <p>2. GITHUB Desktop. (aplicación de escritorio)</p>
+        <li>Sin limite de tamaño a la hora de subir el proyecto al repositorio</li>
+        <li>Esto nos permite subir de manera mas rapida y visual el proyecto a la rama correspondiente</li>
+        <li>Nos facilita la incorporación de descripción</li>
+        <li>Usa de fondo GIT BASH</li>
+        <br><img src="img/githubdesktop.PNG"><br><br>
+
+        <br>
+
+        <p>3. GIT BASH. (Consola de comandos específica para GITHUB).</p>
+        <li>Sin limite de tamaño a la hora de subir el proyecto al repositorio</li>
+        <li>Esto nos permite usar la consola de comandos del propio entorno de desarrollo.</li>
+        <li>Nos permite cambiar entre las ramas con el comando "git checkout &lt;rama&gt;", ademas de poder subir las versiones con las etiquetas</li>
+        <br><img src="img/gitbash.PNG"><br><br>
+            
+        <br>
+
+        <p>4. Consola de comandos propia del S.O</p>
+        <li>Sin limite de tamaño a la hora de subir el proyecto al repositorio</li>
+        <li>Mismas funcionalidades que el GIT BASH</li>
+    
+
+
+<br><br>
+<h1>Comandos:</h1>
+<br><br>
+        <p>GIT CHECKOUT &lt;RAMA&gt;</p>
+                <li>Nos permite cambiar de rama en la consola de comandos o en el GIT BASH</li>
+     
+        <br><br>
+        <p>GIT COMMIT</p>
+            
+                <li>El contenido se muestra sección de BRANCH en la que se haya subido.</li>
+                <li>De esta manera se puede ver que archivos han sido actualizados por el nombre del commit.</li>
+           
+            <br><br>
+        <p>GIT COMMIT + GIT TAG</p>
+            
+                    <li>El contenido se muestra en la sección de TAGS.</li>
+                    <li>Las versiones correspondientes se clasifican con las etiquetas.</li>
+             
+                            <li>Crea un archivo con el nombre del TAG en una carpeta oculta vinculada al github.</li>
+                            <li>Los <a href="https://github.com/RetoGrupo4/WIKI2/tree/v2.9" target="_blank" id="tag">TAGS </a>crean ramas propias.</li>
+             
+                    <li>De esta manera tambien se puede ver que archivos han sido actualizados por el nombre del commit.</li>
+                    <li>Se puede añadir mas informacion a la version con GIT TAG -A &lt;version&gt; -m &lt;comentario&gt;.</li>
+                    <li>Con el comando GIT SHOW &lt;version&gt; podemos ver la información guardada con el comando anterior.</li>
+                    <br><img src="img/gitshow.PNG"><br><br>
+    
+
+<br><br>
+<h1>Control de versiones:</h1>
+<br><br>
+    <p>Dependiendo de que recurso estemos usando nos aparece la diferencia de commits respecto a la rama master.</p><br><br>
+    <p>En el Visual Studio Code aparece que hay 2 commits más, mientras que en la web aparecen 5 commits de diferencia. Esto se debe a que al introducir el comando GIT TAG sobre la rama WIP, el propio VSC solo detecta los commits que se han hecho en esa rama mientras que la web tambien detecta los Tags que se han creado sobre esa rama.</p>
+    <br><img src="img/vscgit.PNG"><br><br>
+    <br><img src="img/ramas.PNG"><br><br>
+    
+    <p>Con el uso del comando GIT TAG podemos llevar un mayor control de las versiones, además de poder mostrarla en el propio proyecto.</p><br><br>
+    <p>Al vincular el proyecto con GITHUB con el comando GIT INIT se genera una carpeta oculta llamada .GIT, la cual nos permite poder acceder a los TAGS en la carpeta .GIT\REFS\TAGS</p><br><br>
+    <p>Para mostrar en la web cual es el último TAG creado, a través de un archivo php obtenemos un array de todos los TAGS, en el cual ordenamos de mayor a menor, siendo la posición 0 (la versión mayor) la que cogeremos para mostrarla en la web.</p><br><br>
+    <br><img src="img/versiones.PNG"><br><br>
+
+<html>
+
